@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Meu primeiro Programa</title>
+    <style>
+      body {
+        background-color: rgb(126, 126, 206);
+        color: white; /* Comentário em CSS */
+        font: normal 20pt Arial;
+      }
+      h1 {
+        color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Olá Mundo !</h1>
+    <!--Isso é um Comentário em HTML -->
+    <p>Já me livrei da maldição</p>
+    <script>
+      var n1 = window.prompt("Digite um número: "); //String
+      var n2 = window.prompt("Digite um número: "); // String
+      window.alert(`O tipo dos valores inseridos são ${typeof n1}`);
+      n1 = Number.parseInt(n1); // number
+      n2 = Number.parseFloat(n2);
+      Number.parseInt(n2); // numer
+      //Tambem existe o Number.parseFloat(n)
+      var soma = n1 + n2;
+      window.alert(`A Soma de ${n1} + ${n2} é ${soma}`);
+      //Outra abordagem
+      var n3 = Number(window.prompt("Digite um número: "));
+      var n4 = Number(window.prompt("Digite um número: "));
+      var soma = n3 + n4;
+      window.alert(soma.toFixed(2).replace(".", ","));
+      document.write(
+        `Seu troco é ${soma.toString().toLocaleString("pt-BR", { style: "currency", currency: "BRL" })}`,
+      );
+
+      // number para string
+      n4.toString();
+      String(soma);
+      var s = "JavaScript";
+
+      s.length; // quantos caracteres a string tem
+      s.toUpperCase; // converter para Maiusculas
+      s.toLowerCase; // Converter para minúsculas
+    </script>
+  </body>
+</html>
