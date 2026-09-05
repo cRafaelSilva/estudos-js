@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Primeiros passos com DOM</title>
+    <style>
+      body {
+        background: rgba(0, 0, 0, 0.466);
+        color: burlywood;
+        font: normal 18pt monospace;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Iniciando Estudos de DOM</h1>
+    <p>Aqui vai o <strong>resultado</strong></p>
+    <p name="paragrafo">Aprendendo a usar o <strong>DOM</strong> em JS</p>
+    <div id="msg">Clique em mim</div>
+    <div class="msg">Clique em mim</div>
+
+    <script>
+      /*
+            Como selecionar elementos
+            * Por Marca -> document.getElementsByTagName('tag')[posicao da tag]
+                ex. var elemento = document.getElementsByTagName('div')[5]
+            * Por ID -> document.getElementsById('id')
+                ex. var elemento = document.getElementsByTagName('msg')
+            * Por Nome -> document.getElementsByName('name')
+                ex. var elemento = document.getElementsByName('paragrafo')[0]
+            * Por Classe -> document.getElementsByClass('classe')[posicao da classe]
+                ex var  elemento = document.getElementsByClass('msg')[0]
+            * Por Seletor -> documento.getElementBySelector('seletor')
+                ex var elemento = document.getElementBySelector('div#msg') -> localize um id msg
+                ex var elemento = document.getElementBySelector('div.msg') -> localiza uma classe msg
+        */
+      var body = document.body;
+      document.getEl;
+      body.style.backgroundColor = "white";
+      var p1 = document.getElementsByTagName("p")[0];
+      var p2 = document.getElementsByTagName("p")[1];
+      alert(window.navigator.appName);
+      document.write(window.document.URL);
+      var paragrafo = document.getElementsByName("paragrafo")[0];
+      paragrafo.style.backgroundColor = "black";
+      p1.style.color = "blue";
+      window.document.write(`Está escrito assim ${p1.innerText}</br>`);
+      window.document.write(` ${p2.innerHTML}`);
+      var d = document.getElementById("msg");
+      d.style.background = "green";
+
+      //recomendado seletor
+      var d2 = document.querySelector("div#msg");
+    </script>
+  </body>
+</html>
