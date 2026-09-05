@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Controle de Fronteira</title>
+  </head>
+  <body>
+    <h1>Policia Federal</h1>
+    <p>Dirija-se ao Controle de Fronteira</p>
+    Digite o Local de Origem:
+    <input type="text" name="local_de_origem" id="local_de_origem" />
+    <input type="button" value="Verificar" onclick="checarEntrada()" />
+    <div id="resposta"></div>
+
+    <script>
+      function checarEntrada() {
+        var origem = document.querySelector("input#local_de_origem").value;
+        var resposta = document.querySelector("div#resposta");
+        resposta.innerHTML = `<p>Checando se você pode entrar no Brasil</p>`;
+        if (origem.toLowerCase() != "x") {
+          resposta.innerHTML += `<p> Bem- vindo ao Brasil</p>`;
+        } else {
+          resposta.innerHTML += `<p> Acesso negado</p>`;
+        }
+      }
+    </script>
+  </body>
+</html>
