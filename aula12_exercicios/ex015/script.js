@@ -19,34 +19,34 @@ function verificar() {
     corpo.style.backgroundColor = "#3934e0";
     genero = "Masculino";
     if (idade <= 4) {
-      res.src = "imgs/bebemenino.jpg";
+      res.setAttribute("src", "imgs/bebemenino.jpg");
     } else if (idade <= 12) {
-      res.src = "imgs/criancamenino.jpg";
+      res.setAttribute("src", "imgs/criancamenino.jpg");
     } else if (idade <= 18) {
-      res.src = "imgs/adolescentemenino.jpg";
+      res.setAttribute("src", "imgs/adolescentemenino.jpg");
     } else if (idade <= 29) {
-      res.src = "imgs/jovemhomen.jpg";
+      res.setAttribute("src", "imgs/jovemhomen.jpg");
     } else if (idade < 60) {
-      res.src = "imgs/adultohomem.jpg";
+      res.setAttribute("src", "imgs/adultohomem.jpg");
     } else {
-      res.src = "imgs/homem-idoso.jpg";
+      res.setAttribute("src", "imgs/homem-idoso.jpg");
     }
     return (msg2.innerHTML = `<p> Sua idade é de ${idade} anos<br> e seu sexo é ${genero}`);
   }
   genero = " Feminino";
   corpo.style.backgroundColor = "#f7daa8";
   if (idade <= 4) {
-    res.src = "imgs/bebemenina.jpg";
+    res.setAttribute("src", "imgs/bebemenina.jpg");
   } else if (idade <= 12) {
-    res.src = "imgs/criancamenina.jpg";
+    res.setAttribute("src", "imgs/criancamenina.jpg");
   } else if (idade <= 18) {
-    res.src = "imgs/adolescentemenina.jpg";
+    res.setAttribute("src", "imgs/adolescentemenina.jpg");
   } else if (idade <= 29) {
-    res.src = "imgs/jovemmulher.jpg";
+    res.setAttribute("src", "imgs/jovemmulher.jpg");
   } else if (idade < 60) {
-    res.src = "imgs/adultomulher.jpg";
+    res.setAttribute("src", "imgs/adultomulher.jpg");
   } else {
-    res.src = "imgs/mulher-idosa.jpg";
+    res.setAttribute("src", "imgs/mulher-idosa.jpg");
   }
   return (msg2.innerHTML = `<p> Sua idade é de ${idade} anos<br> e seu sexo é ${genero}`);
 }
