@@ -1,5 +1,5 @@
 body {
-  background-color: rgba(29, 45, 125, 0.655);
+  background-color: rgba(1, 4, 19, 0.655);
   font: normal 15pt;
   font-family:
     system-ui,
@@ -23,7 +23,7 @@ section {
   background-color: #f5f5f57e;
   border-radius: 10px;
   padding: 15px;
-  width: 800px;
+  width: 500px;
   margin: auto;
   box-shadow: rgba(0, 0, 0, 0.459) 5px 5px 10px;
 }
@@ -34,14 +34,13 @@ div {
 }
 
 #moldura {
-  width: 250px;
-  height: 250px;
   border-radius: 50%;
   overflow: hidden;
   margin: auto;
+  visibility: hidden;
 }
 
-#foto {
+#res {
   width: 100%;
   height: 100%;
   object-fit: cover;
