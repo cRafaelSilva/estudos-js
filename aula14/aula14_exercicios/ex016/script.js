@@ -1,25 +1,24 @@
 function contar() {
-  var inico = document.querySelector("input#inicio");
-  var fim = document.querySelector("input#fim");
-  var passo = document.querySelector("input#passo");
-  var msg = document.querySelector("div#msg");
+  const inico = document.querySelector("input#inicio");
+  const fim = document.querySelector("input#fim");
+  const passo = document.querySelector("input#passo");
+  const msg = document.querySelector("div#msg");
+
+  const valorInicio = converterValores(inico, msg);
+  const valorFim = converterValores(fim, msg);
+
+  if (valorInicio === undefined || valorFim == undefined) return recarregar();
+
   msg.innerText = "Contando: \n";
-  var valor_inico = converterValores(inico);
-  var valor_fim = converterValores(fim);
-  var valor_passo = definirParada(passo);
-  if (valor_inico === undefined || valor_fim == undefined) {
-    msg.innerText = "Impossível contar!";
-    return recarregar();
-  }
-  console.log(valor_passo);
-  if (valor_fim >= valor_inico) {
-    for (let c = valor_inico; c <= valor_fim; c += valor_passo) {
-      console.log(valor_inico);
+
+  const valorPasso = definirParada(passo, msg);
+
+  if (valorFim >= valorInicio) {
+    for (let c = valorInicio; c <= valorFim; c += valorPasso) {
       msg.innerText += `${c} \u{1F449}`;
     }
-  }
-  if (valor_fim < valor_inico) {
-    for (let c = valor_inico; c >= valor_fim; c -= valor_passo) {
+  } else if (valorFim < valorInicio) {
+    for (let c = valorInicio; c >= valorFim; c -= valorPasso) {
       msg.innerText += `${c} \u{1F449}`;
     }
   }
@@ -27,7 +26,7 @@ function contar() {
   msg.innerText += "\u{1F3C1}";
 }
 
-function converterValores(valor) {
+function converterValores(valor, msg) {
   if (valor.validity.valueMissing) {
     msg.innerText = "[ERRO] Favor inserir um valor nos campos inicio ou fim";
     return undefined;
@@ -35,10 +34,9 @@ function converterValores(valor) {
   return Number(valor.value);
 }
 
-function definirParada(valor) {
-  console.log(Number(valor.value));
+function definirParada(valor, msg) {
   if (valor.validity.valueMissing || Number(valor.value) === 0) {
-    msg.innerText = "Passo invalido! Considerando PASSO 1";
+    msg.innerText += "Passo invalido! Considerando PASSO 1 \n";
     return 1;
   }
   return Number(valor.value);
