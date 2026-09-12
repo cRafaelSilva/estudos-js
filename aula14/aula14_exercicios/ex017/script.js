@@ -9,7 +9,7 @@ function gerarTabuada() {
     for (let c = 0; c <= 10; c++) {
       let item = document.createElement("option");
       item.text = `${num} x ${c} = ${num * c}`;
-      item.value = `tab${c}`;
+      item.value = `${c}`;
       selectTab.appendChild(item);
     }
   }

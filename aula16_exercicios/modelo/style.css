@@ -1,0 +1,34 @@
+body {
+  background-color: rgba(29, 45, 125, 0.655);
+  font: normal 15pt;
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    "Open Sans",
+    "Helvetica Neue",
+    sans-serif;
+}
+header {
+  color: whitesmoke;
+  text-align: center;
+}
+
+section {
+  background-color: whitesmoke;
+  border-radius: 10px;
+  padding: 15px;
+  width: 500px;
+  margin: auto;
+  box-shadow: rgba(0, 0, 0, 0.459) 5px 5px 10px;
+}
+
+footer {
+  color: whitesmoke;
+  text-align: center;
+}
